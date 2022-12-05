@@ -276,6 +276,13 @@ $(function () {
   };
   roomAnimate();
 
+  var contactPageScrollDown = function () {
+    if (window.location.pathname === "/pages/contact.html") {
+      window.scrollBy(0, 5);
+    }
+  };
+  contactPageScrollDown();
+
   var stickyPlugin = function () {
     $(".js-sticky-nav").sticky({ topSpacing: 0 });
   };
