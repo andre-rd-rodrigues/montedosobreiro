@@ -1,0 +1,46 @@
+{
+  "name": "montedosobreiro-website",
+  "version": "1.0.0",
+  "description": "[Website: Monte do sobreiro](https://www.montedosobreiro.com)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:scss": "node-sass --output-style compressed -o build/css ./css/scss/*.scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r build/css/*.css",
+    "build:css": "npm run css:scss && npm run css:autoprefixer",
+    "build:images": "imagemin ./images/**/* --out-dir=build/images",
+    "build:js": "webpack --mode=production",
+    "build:html": "posthtml -c posthtml.json",
+    "build": "npm run build:js && npm run build:html && npm run build:images && npm run build:css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b prod -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andre-rd-rodrigues/montedosobreiro.git"
+  },
+  "author": "Andre Rodrigues",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andre-rd-rodrigues/montedosobreiro/issues"
+  },
+  "homepage": "https://andre-rd-rodrigues.github.io/montedosobreiro",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.0",
+    "htmlnano": "^2.0.3",
+    "imagemin-cli": "^7.0.0",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "posthtml": "^0.16.6",
+    "posthtml-cli": "^0.10.0",
+    "posthtml-modules": "^0.9.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.5"
+  }
+}
