@@ -1,9 +1,9 @@
 {
-  "input": "*.html",
-  "output": "./build",
+  "input": "./pages/*.html",
+  "output": "./build/pages",
   "plugins": {
     "posthtml-modules": {
-      "root": "./src/views",
+      "root": "./",
       "initial": true
     },
     "htmlnano": {}
