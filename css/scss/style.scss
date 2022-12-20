@@ -1603,20 +1603,33 @@ footer {
   }
 }
 
-.ul-check {
+%ul-style {
   li {
     padding-left: 35px;
     position: relative;
     margin-bottom: 10px;
     &:before {
       font-family: "icomoon";
-      content: "\e5ca";
       position: absolute;
       left: 0;
       font-size: 22px;
       top: -4px;
       color: $black;
     }
+  }
+}
+
+.ul-check {
+  @extend %ul-style;
+  li:before {
+    content: "\e5ca";
+  }
+}
+
+.ul-visit {
+  @extend %ul-style;
+  li:before {
+    content: "\1F4CD";
   }
 }
 

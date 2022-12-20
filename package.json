@@ -10,7 +10,7 @@
     "build:css": "npm run css:scss && npm run css:autoprefixer",
     "build:images": "imagemin ./images/**/* --out-dir=build/images",
     "build:js": "webpack --mode=production",
-    "build:html": "posthtml -c posthtml.json",
+    "build:html": "posthtml -c posthtml.json && posthtml -c posthtmlindex.json",
     "build": "npm run build:js && npm run build:html && npm run build:images && npm run build:css",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b prod -d build"
@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.20.2",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.0",
+    "gh-pages": "^4.0.0",
     "htmlnano": "^2.0.3",
     "imagemin-cli": "^7.0.0",
     "node-sass": "^4.14.1",
