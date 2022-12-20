@@ -29,6 +29,13 @@
     <title>Monte do Sobreiro - Nature and confort</title>
   </head>
   <body>
+    <div id="untree_co--overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
     <!--    Navbar - mobile -->
     <nav class="untree_co--site-mobile-menu">
       <div class="close-wrap d-flex">
@@ -45,7 +52,7 @@
 
     <div class="untree_co--site-wrap">
       <!--    Navbar -->
-      <nav class="untree_co--site-nav js-sticky-nav">
+      <nav class="untree_co--site-nav dark js-sticky-nav">
         <div class="container d-flex align-items-center">
           <div class="logo-wrap">
             <a href="/" class="untree_co--site-logo">Monte do Sobreiro</a>
@@ -53,10 +60,10 @@
           <div class="site-nav-ul-wrap text-center d-none d-lg-block">
             <ul class="site-nav-ul js-clone-nav">
               <li><a href="/">Home</a></li>
-              <li>
+              <li class="active">
                 <a href="/pages/rooms.html">Accomodation</a>
               </li>
-              <li class="active">
+              <li>
                 <a href="/pages/experiences.html">Experiences</a>
               </li>
               <li><a href="/pages/about.html">About</a></li>
@@ -83,105 +90,126 @@
           </div>
         </div>
       </nav>
-      <h1
-        style="
-          height: 90vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: rgb(221, 221, 221);
-          color: white;
-        "
-      >
-        Coming soon...
-      </h1>
-    </div>
 
-    <!--   Footer -->
-    <footer class="untree_co--site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 pr-md-5">
-            <h3>About Us</h3>
-            <p>
-              A classic Alentejo house with a cozy atmosphere and authenticity.
-              The perfect balance of nature and confort.
+      <main class="untree_co--site-main">
+        <!--  Title -->
+        <div
+          class="untree_co--site-section pb-0 container"
+          id="rooms-first-section"
+        >
+          <h1 data-aos="fade-up" class="text-center hero-heading mt-5">
+            Experiences
+          </h1>
+          <div
+            class="row justify-content-center text-center w-75 m-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <p class="mb-5">
+              In order to give you the best experience, the house has a lounge
+              with living and dining area, with a characteristic Alentejo
+              fireplace, and ample views to the outside. It also includes a
+              fully equipped kitchen. Both the kitchen and the dining room have
+              direct access to the exterior.
             </p>
-            <p><a href="#" class="readmore">Read more</a></p>
           </div>
-          <div class="col-md-8 ml-auto">
+        </div>
+        <!-- Final message section -->
+        <div class="untree_co--site-section py-5 bg-body-darker cta">
+          <div class="container">
             <div class="row">
-              <div class="col-md-3">
-                <h3>Navigation</h3>
-                <ul class="list-unstyled">
-                  <li class="active"><a href="/">Home</a></li>
-                  <li>
-                    <a href="/pages/rooms.html">Accomodation</a>
-                  </li>
-                  <li>
-                    <a href="/pages/experiences.html">Experiences</a>
-                  </li>
-                  <li>
-                    <a href="/pages/about.html">About</a>
-                  </li>
-                  <li>
-                    <a href="/pages/contact.html">Contact</a>
-                  </li>
-                </ul>
+              <div class="col-12 text-center">
+                <h3 class="m-0 p-0">
+                  If you have any special requests, please feel free to call us.
+                  <a href="tel://+123456789012">+12.345.678.9012</a>
+                </h3>
               </div>
-              <div class="col-md-9 ml-auto">
-                <div class="row mb-3">
-                  <div class="col-md-6">
-                    <h3>Address</h3>
-                    <address>
-                      273 South Riverview Rd. <br />
-                      New York, NY 10011
-                    </address>
-                  </div>
-                  <div class="col-md-6">
-                    <h3>Telephone</h3>
-                    <p>
-                      <a href="#">+1 234 5678 910</a> <br />
-                      <a href="#">+2 234 5678 910</a>
-                    </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!--   Footer -->
+      <footer class="untree_co--site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 pr-md-5">
+              <h3>About Us</h3>
+              <p>
+                A classic Alentejo house with a cozy atmosphere and
+                authenticity. The perfect balance of nature and confort.
+              </p>
+              <p><a href="#" class="readmore">Read more</a></p>
+            </div>
+            <div class="col-md-8 ml-auto">
+              <div class="row">
+                <div class="col-md-3">
+                  <h3>Navigation</h3>
+                  <ul class="list-unstyled">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li>
+                      <a href="/pages/rooms.html">Accomodation</a>
+                    </li>
+                    <li>
+                      <a href="/pages/experiences.html">Experiences</a>
+                    </li>
+                    <li>
+                      <a href="/pages/about.html">About</a>
+                    </li>
+                    <li>
+                      <a href="/pages/contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-9 ml-auto">
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <h3>Address</h3>
+                      <address>
+                        273 South Riverview Rd. <br />
+                        New York, NY 10011
+                      </address>
+                    </div>
+                    <div class="col-md-6">
+                      <h3>Telephone</h3>
+                      <p>
+                        <a href="#">+1 234 5678 910</a> <br />
+                        <a href="#">+2 234 5678 910</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row mt-5 pt-5 align-items-center">
-          <div class="col-md-6 text-md-left">
-            <p>
-              Copyright &copy; 2022
-              <a href="/">Monte do Sobreiro</a>. All Rights Reserved. Design by
-              <a
-                href="https://andrerodrigo.com"
-                target="_blank"
-                class="text-primary"
-                >Andre Rodrigues</a
-              >
-            </p>
-          </div>
-          <div class="col-md-6 text-md-right">
-            <ul class="icons-top icons-dark">
-              <li>
-                <a href="#"><span class="icon-facebook"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="icon-twitter"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="icon-instagram"></span></a>
-              </li>
-              <li>
-                <a href="#"><span class="icon-tripadvisor"></span></a>
-              </li>
-            </ul>
+          <div class="row mt-5 pt-5 align-items-center">
+            <div class="col-md-6 text-md-left">
+              <p>
+                Copyright &copy; 2022
+                <a href="/">Monte do Sobreiro</a>. All Rights Reserved. Design
+                by
+                <a
+                  href="https://andrerodrigo.com"
+                  target="_blank"
+                  class="text-primary"
+                  >Andre Rodrigues</a
+                >
+              </p>
+            </div>
+            <div class="col-md-6 text-md-right">
+              <ul class="icons-top icons-dark">
+                <li>
+                  <a href="#"><span class="icon-facebook"></span></a>
+                </li>
+
+                <li>
+                  <a href="#"><span class="icon-instagram"></span></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="../js/vendor/jquery-3.3.1.min.js"></script>
     <script src="../js/vendor/popper.min.js"></script>
